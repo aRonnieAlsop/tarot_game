@@ -3,3 +3,14 @@
     cursor: url('/public/tarot_assets/hand_cursor.png'), auto;
 }
   
+.global-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3rem; /* Adjust size as needed */
+    text-align: center;
+    margin-top: 20px;
+    color: #333; /* Classic black */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Slight spacing for elegance */
+    border-bottom: 2px solid #333; /* Optional underline effect */
+    padding-bottom: 10px; /* Space below the title */
+  }
