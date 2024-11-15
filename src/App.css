@@ -33,72 +33,97 @@ input, textarea {
 
 
  /* Pop-Up Overlay */
-.popup-overlay {
+ .popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    background: url('/public/tarot_assets/star_backdrop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8; /* Makes the entire overlay semi-transparent */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
   }
+
+  .popup-overlay {
+    backdrop-filter: brightness(0.9); /* Darkens the image slightly */
+    -webkit-backdrop-filter: brightness(0.9); /* For Safari */
+  }
   
-  /* Pop-Up Box */
   .popup {
     position: relative;
-    background: #000; /* Black background to make neon pop */
+    background: #f4e9db; /* Light parchment color for a tarot card feel */
+    border: 4px solid #8b4513; /* Dark brown border */
+    border-radius: 10px; /* Rounded edges for a card-like appearance */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    width: 250px;
+    height: 450px;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    max-width: 400px;
-    width: 90%;
-    border: 2px solid #333;
+    font-family: 'Libre Baskerville', serif; /* Old-fashioned serif font */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
-  /* Neon Text Effect */
-  .neon-text {
-    font-family: 'Arial', sans-serif;
-    font-size: 2rem;
-    color: #ff007a; /* Neon pink */
-    text-transform: uppercase;
-    text-shadow: 
-      0 0 5px #ff007a,
-      0 0 10px #ff007a,
-      0 0 20px #ff007a,
-      0 0 30px #ff1d89,
-      0 0 40px #ff1d89,
-      0 0 50px #ff1d89;
-    margin-bottom: 20px;
+  .popup h2 {
+    font-size: 1.3rem;
+    color: black; /* Dark text color */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Tarot-style text */
+    letter-spacing: 2px; /* Slightly spaced letters for an elegant look */
   }
   
-  /* Bold "X" Close Button */
+  .popup p {
+    font-size: 1rem;
+    color: #555; /* Medium gray for readability */
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+
   .close-popup {
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #f4e9db 60%, #8b4513 95%); /* Pentacle-like shading */
+    border: 2px solid #8b4513; /* Matches card border */
+    border-radius: 50%; /* Circle shape */
+    color: #8b4513; /* Dark brown text */
     font-size: 1.5rem;
-    color: white;
-    background: transparent;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-    transition: color 0.3s ease, transform 0.2s ease;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
   
   .close-popup:hover {
-    color: red;
-    transform: scale(1.2);
+    transform: scale(1.2); /* Slight zoom effect */
+    box-shadow: 0 0 10px #8b4513;
   }
+  
+  
   
   /* Footer */
   .footer {
-    background: #333;
+    background: #503929;
     color: white;
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: 
+    -1px -1px 0 #3f2411, /* Top-left shadow */
+    1px -1px 0 #3f2411,  /* Top-right shadow */
+    -1px 1px 0 #3f2411,  /* Bottom-left shadow */
+    1px 1px 0 #3f2411;   /* Bottom-right shadow */
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -111,20 +136,9 @@ input, textarea {
     font-size: 0.9rem;
   }
 
-  .popup {
-    animation: fadeIn 0.5s ease-in-out;
-  }
+ 
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+
   
   
   
