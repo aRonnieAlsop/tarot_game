@@ -1,0 +1,42 @@
+/* Landing Page Container */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    margin-top: -50px; /* Adjust spacing to center below the title */
+  }
+  
+  /* Tarot Card Stack Container */
+  .tarot-card-stack {
+    position: relative;
+    width: 250px; /* Match the popup card's width */
+    height: 450px; /* Match the popup card's height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Individual Tarot Card */
+  .tarot-card {
+    position: absolute;
+    width: 250px; /* Same width as the popup */
+    height: 450px; /* Same height as the popup */
+    background: url('/public/tarot_assets/back_of_card.jpg'), #d8ba93; /* Pattern and antique background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid #8b4513; /* Same border style as popup */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: rotate(calc(-3deg + 6deg * var(--index))); /* Slight rotation for stacked effect */
+    z-index: var(--index); /* Ensure proper stacking */
+  }
+  
+  /* Spacing Between Cards */
+  .tarot-card:nth-child(1) { --index: 3; }
+  .tarot-card:nth-child(2) { --index: 2; }
+  .tarot-card:nth-child(3) { --index: 1; }
+  

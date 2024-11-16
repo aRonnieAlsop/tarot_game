@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import LandingPage from './components/LandingPage/LandingPage';
+import CardSpread from './components/CardSpread/CardSpread';
 
 function App() {
 
@@ -15,7 +17,10 @@ function App() {
       <div>
         {/* Global Title */}
         <div className="global-title">TAROT</div>
-
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/cardspread" element={<CardSpread />} />        
+          </Routes>
         {/* Pop-Up Disclaimer */}
         {showPopup && (
           <div className="popup-overlay">
@@ -27,6 +32,7 @@ function App() {
             </div>
           </div>
         )}
+
 
         {/* Footer Disclaimer */}
         <footer className="footer">

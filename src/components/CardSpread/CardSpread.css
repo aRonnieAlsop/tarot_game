@@ -1,0 +1,76 @@
+/* Container for the CardSpread page */
+.card-spread {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    height: 100vh;
+    padding: 20px;
+    gap: 20px; /* Space between the stack and content */
+  }
+  
+  /* Tarot Card Stack */
+  .tarot-card-stack {
+    position: relative;
+    width: 250px; /* Default size */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth resizing */
+  }
+  
+  /* Tarot Card */
+  .tarot-card {
+    position: absolute;
+    width: 250px;
+    height: 450px;
+    background: url('/public/tarot_assets/back_of_card.jpg'), #d8ba93;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid #8b4513;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: rotate(calc(-3deg + 6deg * var(--index)));
+    z-index: var(--index);
+  }
+  
+  .tarot-card:nth-child(1) { --index: 3; }
+  .tarot-card:nth-child(2) { --index: 2; }
+  .tarot-card:nth-child(3) { --index: 1; }
+  
+
+  
+  /* Responsive Behavior */
+  @media (max-width: 768px) {
+    .tarot-card-stack {
+      width: 100px; /* Shrink the card stack */
+      height: 180px;
+      position: absolute; /* Position in the top-left corner */
+      top: 20px;
+      left: 10px;
+    }
+  
+    .tarot-card {
+      width: 100px; /* Match the smaller size */
+      height: 180px;
+    }
+  
+    .card-spread {
+      flex-direction: column; /* Stack the content vertically */
+      justify-content: flex-start; /* Align to top */
+      gap: 10px; /* Smaller gap */
+    }
+  
+  }
+  
+  @media (min-width: 769px) {
+    .tarot-card-stack {
+      margin-left: 53px; /* Align to the left for larger screens */
+      position: relative; 
+      top: -80px;
+    }
+  }
+  
