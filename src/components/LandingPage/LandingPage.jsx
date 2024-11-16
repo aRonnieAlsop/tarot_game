@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       {/* Tarot Card Stack */}
-      <div className="tarot-card-stack" onClick={handleCardClick}>
+      <div className="tarot-stack" onClick={handleCardClick}>
         {/* layers to mimic a stack */}
         <div className="tarot-card back-pattern"></div>
         <div className="tarot-card back-pattern"></div>

@@ -9,7 +9,7 @@
   }
   
   /* Tarot Card Stack Container */
-  .tarot-card-stack {
+  .tarot-stack {
     position: relative;
     width: 250px; /* Match the popup card's width */
     height: 450px; /* Match the popup card's height */

@@ -52,19 +52,47 @@
   .nav-title {
     font-size: 2rem;
     font-family: 'Libre Baskerville', serif;
-    color: rgb(178, 139, 10);
-    margin-bottom: 30px; /* Space below the title */
+    color: transparent; /* Start transparent for shimmer effect */
+    background: linear-gradient(90deg, #b08d57, #ffd700, #b08d57); /* Gold leaf gradient */
+    background-clip: text; /* Clips background to the text */
+    -webkit-background-clip: text;
+    animation: shimmer 2s ease forwards; /* Shimmer animation */
     text-align: center;
+    margin-bottom: 20px;
+    opacity: 0; /* Start invisible */
   }
 
 .nav-bar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center links within the nav-bar */
     gap: 15px; /* Space between links */
-    position: relative;
-    right: auto; /* Reset right positioning */
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    animation: fade-in 1.5s ease forwards 2s; /* Fade in after 2s delay */
+  }
+
+/* Keyframes for Title Shimmer Effect */
+@keyframes shimmer {
+    0% {
+      background-position: -200%;
+      opacity: 1; /* Start appearing */
+    }
+    100% {
+      background-position: 200%; /* Move shimmer across text */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  /* Keyframes for Nav Links Fade-In */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Slide up into view */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Settle into final position */
+    }
   }
   
   .nav-link {
