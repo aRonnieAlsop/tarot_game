@@ -19,7 +19,12 @@ function App() {
         <div className="global-title">TAROT</div>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/cardspread" element={<CardSpread />} />        
+          <Route path="/cardspread" element={<CardSpread />} /> 
+          <Route path="/one-card" element={<div>One Card Page</div>} />
+          <Route path="/draw-three" element={<div>Draw Three Page</div>} />
+          <Route path="/cross" element={<div>Cross Page</div>} />
+          <Route path="/horseshoe" element={<div>Horseshoe Page</div>} />
+          <Route path="/cardspread" element={<CardSpread />} />       
           </Routes>
         {/* Pop-Up Disclaimer */}
         {showPopup && (
