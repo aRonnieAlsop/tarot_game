@@ -43,23 +43,27 @@
 /* Navigation Bar */
 .nav-section {
     display: flex;
-    flex-direction: column; /* Stack title and nav-bar */
-    align-items: center; /* Center-align the content */
-    margin-left: 50px; /* Adjust distance from the card-stack */
+    flex-direction: column; 
+    align-items: center; 
+    margin-left: 50px; 
   }
   
   /* Title Above Navigation Links */
   .nav-title {
-    font-size: 2rem;
+    font-size: 3rem; 
     font-family: 'Libre Baskerville', serif;
-    color: transparent; /* Start transparent for shimmer effect */
-    background: linear-gradient(90deg, #b08d57, #ffd700, #b08d57); /* Gold leaf gradient */
-    background-clip: text; /* Clips background to the text */
-    -webkit-background-clip: text;
-    animation: shimmer 2s ease forwards; /* Shimmer animation */
-    text-align: center;
-    margin-bottom: 20px;
-    opacity: 0; /* Start invisible */
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-1%);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0%;
+    animation: magical-writing 3s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
+    z-index: 10;
   }
 
 .nav-bar {
@@ -68,30 +72,37 @@
     gap: 15px; /* Space between links */
     align-items: center;
     opacity: 0; /* Initially hidden */
-    animation: fade-in 1.5s ease forwards 2s; /* Fade in after 2s delay */
+    animation: nav-links-appear 1.5s ease-in-out forwards 5s; /* Appear after the title animation finishes */
   }
 
-/* Keyframes for Title Shimmer Effect */
-@keyframes shimmer {
+/* Keyframes for Title Animation */
+@keyframes magical-writing {
     0% {
-      background-position: -200%;
-      opacity: 1; /* Start appearing */
+        width: 0%;
     }
     100% {
-      background-position: 200%; /* Move shimmer across text */
-      opacity: 1; /* Fully visible */
+        width: 100%;
     }
-  }
-  
-  /* Keyframes for Nav Links Fade-In */
-  @keyframes fade-in {
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+  /* Keyframes for Nav Links Animation */
+@keyframes nav-links-appear {
     0% {
       opacity: 0;
-      transform: translateY(20px); /* Slide up into view */
+      transform: translateY(20px); 
     }
     100% {
       opacity: 1;
-      transform: translateY(0); /* Settle into final position */
+      transform: translateY(0); 
     }
   }
   
