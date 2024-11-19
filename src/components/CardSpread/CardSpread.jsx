@@ -6,8 +6,13 @@ const CardSpread = () => {
   return (
     <div className="card-spread">
      {/* Navigation Bar */}
-      <div className="nav-section">
-        <h2 className="nav-title">Choose Your Spread</h2>
+      
+      <h2 className="nav-title">
+            <span className="title-line">Choose</span>
+            <span className="title-line">Your</span>
+            <span className="title-line">Spread</span>
+     </h2>
+    <div className="nav-section">
       <nav className="nav-bar">
         {/*One Card Spread*/}
         <div className="spread-preview">

@@ -48,18 +48,24 @@
     margin-left: 50px; 
   }
   
-  /* Title Above Navigation Links */
-  .nav-title {
-    font-size: 2.5rem;
+/* Title Styling */
+.nav-title {
+    font-size: 3rem; /* Adjust for larger screens */
     font-family: 'Libre Baskerville', serif;
     font-weight: normal;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
-    position: relative; 
-    margin-bottom: 20px;
+    text-align: center; /* Center for mobile view */
+    position: relative; /* Default positioning for mobile */
+    margin-bottom: 20px; /* Space below the title for nav-links */
     animation: magical-writing 3s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
+  }
+  
+  /* Individual Line Styling */
+  .title-line {
+    display: block; /* Ensure each word is on a new line */
+    text-align: center; /* Default alignment */
   }
 
 .nav-bar {
@@ -137,24 +143,39 @@
   }
   
 
-/* Keyframes for Title Animation */
+/* Animations */
+
+/* Magical Writing Effect for Mobile */
 @keyframes magical-writing {
     0% {
-        width: 0%;
+      width: 0%; /* Start with no text visible */
     }
     100% {
-        width: 100%;
+      width: 100%; /* Fully reveal the text */
     }
-}
+  }
+  
+/* Animations */
 
-@keyframes fade-in {
+/* Magical Writing Effect */
+@keyframes magical-writing {
     0% {
-        opacity: 0;
+      width: 0%; /* Start with no text visible */
     }
     100% {
-        opacity: 1;
+      width: 100%; /* Fully reveal the text */
     }
-}
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   /* Keyframes for Nav Links Animation */
 @keyframes nav-links-appear {
@@ -225,18 +246,20 @@
   
   }
   
-  @media (min-width: 769px) {
-    .tarot-card-stack {
-        font-size: 3rem;
-        position: absolute;
-        top: 50%; 
-        left: 5%; 
-        transform: translateY(-50%); 
-        writing-mode: vertical-rl;
-        text-orientation: upright;  
-        line-height: 1.5; 
-        text-align: left;
-        margin-bottom: 0;
+/* Larger Screens */
+@media (min-width: 769px) {
+    .nav-title {
+      position: absolute;
+      top: 50%; /* Center vertically */
+      left: 5%; /* Align to the left side */
+      transform: translateY(-50%); /* Ensure proper vertical alignment */
+      text-align: left; /* Align text to the left */
+      margin-bottom: 0; /* Remove extra margin */
+    }
+  
+    .title-line {
+      display: block; /* Ensure stacking on separate lines */
+      text-align: left; /* Align words to the left */
     }
   }
   
