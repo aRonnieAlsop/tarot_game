@@ -5,14 +5,7 @@ import './CardSpread.css';
 const CardSpread = () => {
   return (
     <div className="card-spread">
-      {/* Tarot Card Stack */}
-      <div className="tarot-card-stack">
-        <div className="tarot-card back-pattern"></div>
-        <div className="tarot-card back-pattern"></div>
-        <div className="tarot-card back-pattern"></div>
-      </div>
-
-      {/* Navigation Bar */}
+     {/* Navigation Bar */}
       <div className="nav-section">
         <h2 className="nav-title">Choose Your Spread</h2>
       <nav className="nav-bar">
@@ -64,7 +57,7 @@ const CardSpread = () => {
         </div>
       </nav>
       </div>
-    </div>
+      </div>
   );
 };
 
