@@ -82,7 +82,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; 
+    gap: 5px; 
   }
   
   /* General Card Style */
@@ -94,54 +94,10 @@
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
-  
-  /* Specific Spread Layouts */
-  .spread-one-card .card {
-    margin: 0 auto;
-  }
-  
-  .spread-draw-three {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .spread-cross {
-    display: grid;
-    grid-template-areas:
-      "card1 card2"
-      "card3 card4"
-      "card5 .";
-    gap: 5px;
-  }
-  
-  .spread-cross .card:nth-child(1) {
-    grid-area: card1;
-  }
-  .spread-cross .card:nth-child(2) {
-    grid-area: card2;
-  }
-  .spread-cross .card:nth-child(3) {
-    grid-area: card3;
-  }
-  .spread-cross .card:nth-child(4) {
-    grid-area: card4;
-  }
-  .spread-cross .card:nth-child(5) {
-    grid-area: card5;
-  }
-  
-  .spread-horseshoe {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    max-width: 50px;
-  }
-  
-  .spread-horseshoe .card {
-    flex: 1 0 30%; 
-  }
-  
+
+.nav-image {
+  width: 60px;
+}
 
 /* Animations */
 
