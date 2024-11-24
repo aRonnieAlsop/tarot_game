@@ -7,10 +7,12 @@ import CardSpread from './components/CardSpread/CardSpread';
 function App() {
 
   const [showPopup, setShowPopup] = useState(true);
+  const [popupClosed, setPopupClosed] = useState(false);
 
   const closePopup = () => {
     setShowPopup(false);
-  }
+    setTimeout(() => setPopupClosed(true), 500);
+  };
 
   return (
     <Router>
@@ -18,7 +20,7 @@ function App() {
         {/* Global Title */}
         <div className="global-title">TAROT</div>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage popupClosed={popupClosed} />} />
           <Route path="/cardspread" element={<CardSpread />} /> 
           <Route path="/one-card" element={<div>One Card Page</div>} />
           <Route path="/draw-three" element={<div>Draw Three Page</div>} />

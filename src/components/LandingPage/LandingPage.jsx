@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css'; 
 
-const LandingPage = () => {
+const LandingPage = ({ popupClosed }) => {
   const navigate = useNavigate();
   
   const handleCardClick = () => {
@@ -18,6 +18,8 @@ const LandingPage = () => {
         <div className="tarot-card back-pattern"></div>
         <div className="tarot-card back-pattern"></div>
         <div className="tarot-card back-pattern"></div>
+        {/* Enter Sign */}
+        {popupClosed && <div className="enter-sign">Enter</div>}
       </div>
     </div>
   );
