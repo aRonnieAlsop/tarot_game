@@ -50,22 +50,22 @@
   
 /* Title Styling */
 .nav-title {
-    font-size: 3rem; /* Adjust for larger screens */
+    font-size: 3rem;
     font-family: 'Libre Baskerville', serif;
     font-weight: normal;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center; /* Center for mobile view */
-    position: relative; /* Default positioning for mobile */
-    margin-bottom: 20px; /* Space below the title for nav-links */
+    text-align: center;
+    position: relative; 
+    margin-bottom: 20px; 
     animation: magical-writing 3s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
   }
   
   /* Individual Line Styling */
   .title-line {
-    display: block; /* Ensure each word is on a new line */
-    text-align: center; /* Default alignment */
+    display: block; 
+    text-align: center; 
   }
 
 .nav-bar {
@@ -246,20 +246,20 @@
   
   }
   
-/* Larger Screens */
+/*Larger Screen */
 @media (min-width: 769px) {
     .nav-title {
       position: absolute;
-      top: 50%; /* Center vertically */
-      left: 5%; /* Align to the left side */
-      transform: translateY(-50%); /* Ensure proper vertical alignment */
-      text-align: left; /* Align text to the left */
-      margin-bottom: 0; /* Remove extra margin */
+      top: 50%; 
+      left: 5%; 
+      transform: translateY(-50%); 
+      text-align: left; 
+      margin-bottom: 0; 
     }
   
     .title-line {
-      display: block; /* Ensure stacking on separate lines */
-      text-align: left; /* Align words to the left */
+      display: block; 
+      text-align: left;
     }
   }
   
