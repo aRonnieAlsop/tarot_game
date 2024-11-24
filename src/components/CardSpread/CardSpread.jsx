@@ -29,7 +29,7 @@ const CardSpread = () => {
           Draw Three
         </NavLink>
         <div className="spread-preview">
-        <img src="/tarot_assets/cross.jpg" className="nav-image" />
+        <img src="/tarot_assets/cross.jpg" className="nav-image-cross" />
         <NavLink to="/cross" className="nav-link" activeClassName="active">
           Cross
         </NavLink>
