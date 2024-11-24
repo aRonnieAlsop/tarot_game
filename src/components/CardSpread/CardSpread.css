@@ -59,7 +59,8 @@
     letter-spacing: 2px;
     text-align: center;
     position: relative; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    opacity: 0; 
     animation: magical-writing 3s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
   }
   
