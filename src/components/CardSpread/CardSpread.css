@@ -61,7 +61,7 @@
     position: relative; 
     margin-bottom: 20px;
     opacity: 0; 
-    animation: magical-writing 3s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
+    animation: magical-writing 0.5s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
   }
   
   /* Individual Line Styling */
@@ -87,11 +87,11 @@
   }
 
 .nav-image {
-  width: 75px;
+  width: 85px;
 }
 
 .nav-image-cross {
-  width: 66px;
+  width: 76px;
 }
 
 /* Animations */
