@@ -245,5 +245,18 @@
       display: block; 
       text-align: left;
     }
+
+    .nav-link {
+      text-align: center;
+      margin-right: 50px;
+    }
+
+    .nav-image {
+      margin-right: 50px;
+    }
+
+    .nav-image-cross {
+      margin-right: 50px;
+    }
   }
   
