@@ -61,7 +61,7 @@
     position: relative; 
     margin-bottom: 20px;
     opacity: 0; 
-    animation: magical-writing 0.5s steps(40, end) forwards, fade-in 0.5s ease-in 3s forwards;
+    animation: magical-writing 0.5s steps(40, end) forwards, fade-in 0.5s ease-in 1s forwards;
   }
   
   /* Individual Line Styling */
@@ -76,7 +76,7 @@
     gap: 60px; 
     align-items: center;
     opacity: 0; 
-    animation: nav-links-appear 1.5s ease-in-out forwards 5s; 
+    animation: nav-links-appear 1.5s ease-in-out forwards 2.5s; 
   }
 
 /* Spread Previews Container */
