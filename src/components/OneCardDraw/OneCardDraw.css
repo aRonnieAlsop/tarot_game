@@ -1,4 +1,20 @@
-/* Tarot Card Stack Container */
+/* Page Layout */
+.one-card-draw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, #1b1b2f, #0f0f1b); 
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+
+
+
+/* Tarot Card Stack Container
 .tarot-stack {
     position: relative;
     width: 250px; 
@@ -29,3 +45,63 @@
   .tarot-card:nth-child(1) { --index: 3; }
   .tarot-card:nth-child(2) { --index: 2; }
   .tarot-card:nth-child(3) { --index: 1; }
+ */
+
+  /* Fortune Teller Bubble */
+  .fortune-bubble {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 3px solid #8b4513;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    max-width: 300px;
+    text-align: center;
+    color: #fff;
+    animation: bubble-fade-in 1s ease-in-out;
+  }
+
+  @keyframes bubble-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  /* Neon Sign */
+.neon-sign {
+    position: absolute;
+    top: 70%;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    color: #ff0077;
+    text-shadow: 
+    0 0 5px #ff0077,
+    0 0 10px #ff0077,
+    0 0 20px #ff0077,
+    0 0 40px #ff0077,
+    0 0 80px #ff0077;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0% {
+      opacity: 0.8;
+      text-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077, 0 0 30px #ff0077, 0 0 50px #ff0077;
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 5px #ff0077, 0 0 15px #ff0077, 0 0 30px #ff0077, 0 0 60px #ff0077;
+    }
+    100% {
+      opacity: 0.9;
+      text-shadow: 0 0 20px #ff0077, 0 0 30px #ff0077, 0 0 40px #ff0077, 0 0 70px #ff0077;
+    }
+  }
