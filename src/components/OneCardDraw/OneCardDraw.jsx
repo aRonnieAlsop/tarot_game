@@ -10,7 +10,7 @@ const OneCardDraw = () => {
         //update message & control visibility of elements
         const messageTimeouts = [
             setTimeout(() => setMessage("Really focus hard on your question..."), 4000),
-            setTimeout(() => setShowBubble(false, 8000)), // Hide the bubble
+            setTimeout(() => setShowBubble(false), 8000), // Hide the bubble
             setTimeout(() => setShowNeonSign(true), 8500), // Show neon sign
         ];
 
