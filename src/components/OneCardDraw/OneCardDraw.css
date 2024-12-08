@@ -49,17 +49,13 @@
 
   /* Fortune Teller Bubble */
   .fortune-bubble {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 20px;
     border: 3px solid #8b4513;
     border-radius: 15px;
     font-size: 1.2rem;
     max-width: 300px;
-    text-align: center;
     color: black;
+    background-color: rgba(255, 255, 255, 0.9); 
     animation: bubble-fade-in 1s ease-in-out;
   }
 
@@ -76,18 +72,16 @@
 
   /* Neon Sign */
 .neon-sign {
-    position: absolute;
-    top: 70%;
     font-size: 2rem;
     font-family: 'Pacifico', cursive;
     color: #ff0077;
     text-shadow: 
-    0 0 5px #ff0077,
-    0 0 10px #ff0077,
-    0 0 20px #ff0077,
-    0 0 40px #ff0077,
-    0 0 80px #ff0077;
+        0 0 5px #ff0077,
+        0 0 10px #ff0077,
+        0 0 20px #ff0077,
+        0 0 40px #ff0077;
     animation: neon-flicker 1.5s infinite alternate;
+    margin-top: 20px;
 }
 
 @keyframes neon-flicker {
